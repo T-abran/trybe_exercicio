@@ -1,7 +1,12 @@
-const num1 = 2;
-const num2 = 7;
-if (num1>num2){
+const num1 = 22;
+const num2 = 10;
+const num3 = 17;
+if (num1 > num2 && num1 > num3){
     console.log(num1)
-}else{
-    console.log(num2)
 }
+else if (num2 > num1 && num2 > num3){
+    console.log(num2)
+}else {
+    console.log(num3)
+}
+    
