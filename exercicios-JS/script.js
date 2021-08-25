@@ -1,12 +1,9 @@
-const num1 = 22;
-const num2 = 10;
-const num3 = 17;
-if (num1 > num2 && num1 > num3){
-    console.log(num1)
-}
-else if (num2 > num1 && num2 > num3){
-    console.log(num2)
-}else {
-    console.log(num3)
+const num1 = 0;
+if (num1 >=1){
+    console.log("positive")
+}else if (num1 <= -1){
+    console.log("negative")
+}else{
+    console.log("zero")
 }
     
