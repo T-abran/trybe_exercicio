@@ -5,4 +5,4 @@ let info = {
   };
   info ['recorrente']='sim';
   for (let key in info)
-  console.log(key,info[key])
+  console.log(key)
