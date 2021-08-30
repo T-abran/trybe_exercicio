@@ -1,12 +1,13 @@
+function somaSubtracao(num1, num2, somaSubtracao) {
+    if (somaSubtracao == "+") {
+        return num1 + num2;
+    } else if (somaSubtracao == "-") {
+        return num1 - num2;
+    } else {
+        return "nenhuma das opções";
+    }
+}
 
-function executaOperacao(numero1, numero2, operacao) {
-    return operacao(numero1, numero2);
-  }
-  function soma(numero1, numero2) {
-    return numero1 + numero2;
-  }
-  function multiplicacao(numero1, numero2) {
-    return numero1 * numero2;
-  }
-  console.log(executaOperacao(1, 1, soma)); 
-  console.log(executaOperacao(2, 2, multiplicacao)); 
+console.log(somaSubtracao(3, 6, '+'));
+console.log(somaSubtracao(3, 6, '-')); 
+console.log(somaSubtracao(3, 6));
