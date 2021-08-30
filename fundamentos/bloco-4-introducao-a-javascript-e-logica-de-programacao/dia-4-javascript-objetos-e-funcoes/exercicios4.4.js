@@ -3,5 +3,6 @@ let info = {
     origem: 'Pato Donald',
     nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
   };
+  info ['recorrente']='sim';
   for (let key in info)
-  console.log("Bem vinda,"+" "+ info.personagem)gi
+  console.log(key,info[key])
