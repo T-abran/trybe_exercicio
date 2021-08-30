@@ -1,9 +1,9 @@
-let car = {
-    type: 'Fiat',
-    model: '500',
-    color: 'white',
+let names = {
+    person1: 'João',
+    person2: 'Maria',
+    person3: 'Jorge' 
   };
-  
-  for (let index in car) {
-    console.log(index, car[index]);
+  for(index in names){
+    console.log("ola"+ " " +names[index])   
   }
+  
