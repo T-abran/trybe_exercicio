@@ -4,4 +4,6 @@ let player = {
     lastName : 'Abranges',
     age : 20,
 }
-console.log("o jogador" +" " + player.name +" " +player.lastName+" " +"tem "+ player.age +" " +"anos de idade")
+
+player['anoCampeao']=[2006, 2007, 2008, 2009, 2010, 2018];
+console.table(player)
