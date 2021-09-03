@@ -1,4 +1,3 @@
 document.getElementById("page-title").innerText = "Projeto Almanaque";
-
-const paragraph = document.getElementById("paragraph");
-      paragraph.style.color = "red";
+document.getElementById("second-paragraph").innerText = "O melhor filme desse planeta";
+document.getElementById("subtitle").innerText = "Apenas mais um sucesso de aventura e ficção"
