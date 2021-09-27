@@ -1,21 +1,8 @@
-/* const checkIfElse = (age) => {
-    if (age >= 18) {
-      return `Você tem idade para dirigir!`;
-    } else {
-      return `Você ainda não tem idade para dirigir...`;
-    }
-  }; */
+const oddsAndEvens =( [array]) =>  {
+let sort = oddsAndEvens.sort
+return sort
+};
 
-  const testingScope= escopo =>{
-    if (escopo === true) {
-     let letras = 'tiago abranges';
-     return (`ola, ${letras}!`)
-     return juntas
-    } else {
-        let bnome = 'brunna martins'
-     return (`olha se nao é a ${bnome}`)
-    }
-   
-  }
+// Seu código aqui.
 
-  console.log(testingScope(false));
+console.log(oddsAndEvens(11,12,13,4,5,6)); // será necessário alterar essa linha 😉
