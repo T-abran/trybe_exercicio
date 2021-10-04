@@ -12,6 +12,7 @@ console.log(doingThings(despertador));
 
 // Ela deve retornar o valor do respectivo parâmetro, neste caso:
 // Acordando!!
+
 console.log(' ');
 console.log(despertador());
 console.log(' ');
