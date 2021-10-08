@@ -1,31 +1,41 @@
-const persons = [
-    {
-        name: 'tiago',
-        years: 20,
-        city: 'neves',
-    },
- {
-    name: 'marcus',
-    years: 18,
-    city: 'lagoa',
- },
- {
-    name: 'ray',
-    years: 19,
-    city: 'castelo',
+const imc = (peso, altura) => (peso / (altura * altura)).toFixed(2);
+const patientInfo = [60, 1.7];
+//passando spread como parametro da funçao
 
- },
- {
-    name: 'brunna',
-    years:17,
-    city:'neves',
- }
-];
+console.log(imc(...patientInfo)); 
 
-const numbers = [1, 2, 3, 5, 7, 23, 12];
 
-const multipliesFor2 = (element) => {
-    console.log(`${element} * 2: ${element * 2}`);
+const randomNumbers = [57, 8, 5, 800, 152, 74, 630, 98, 40];
+//usando spread em com max e min
+console.log(Math.max(...randomNumbers)); 
+console.log(Math.min(...randomNumbers)); 
+
+const people = {
+    id: 101,
+    name: 'Alysson',
+    age: 25,
   };
   
-  numbers.forEach(multipliesFor2);
+  const about = {
+    address: 'Av. Getúlio Vargas, 1000',
+    occupation: 'Developer',
+  };
+  //utilizando spread para concatenar objetos
+  
+  const customer = { ...people, ...about };
+  console.log(customer); 
+
+
+  // Faça uma lista com as suas frutas favoritas
+const specialFruit = ['maracuja', 'pera', 'manga'];
+
+// Faça uma lista de complementos que você gostaria de adicionar
+const additionalItens = ['mel', 'chocolate', 'chantily'];
+
+const fruitSalad = (fruit, additional) => {
+  return [...fruit,'morango','granola',...additional]
+};
+//ou assim 
+//const fruitSalad = (fruit, additional) => [...fruit,'morango','granola',...additional];
+
+console.log(fruitSalad(specialFruit, additionalItens));
