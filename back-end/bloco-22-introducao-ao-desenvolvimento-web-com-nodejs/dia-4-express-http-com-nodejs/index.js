@@ -16,4 +16,12 @@ app.post('/hello', (_req, res) =>{
   return res.status(200).json({"message": `Hello, ${name}!`})
 })
 
+app.post('/greetings', (_req, res) => {
+  const {name, age } = _req.body;
+  if(parseInt(age, 10) <= 17){
+    return res.status(401).json({message:`Unauthorized`});
+  }
+  return res.status(200).json( { message:`Hello ${name}`})
+})
+
 app.listen(3000, () => console.log('ouvindo na porta 3000!'));
