@@ -1,27 +1,28 @@
-// Crie uma rota GET /ping
-// Sua rota deve retornar o seguinte JSON: { message: 'pong' }
-
 const express = require('express');
-const app = express();
 const bodyParser = require('body-parser');
 
+const app = express();
 app.use(bodyParser.json());
 
+const recipes = [
+  { id: 1, name: 'Lasanha', price: 40.0, waitTime: 30 },
+  { id: 2, name: 'Macarrão a Bolonhesa', price: 35.0, waitTime: 25 },
+  { id: 3, name: 'Macarrão com molho branco', price: 35.0, waitTime: 25 },
+];
 
-app.get('/ping', (_req, res) => 
-res.json({ "message": "pong" }));
+app.post('/recipes',
+function (req, res, next) {
+  const { name } = req.body;
+  if (!name || name === '') return res.status(400).json({ message: 'Invalid data!'}); // 1
 
-app.post('/hello', (_req, res) =>{
-  const { name } = _req.body;
-  return res.status(200).json({"message": `Hello, ${name}!`})
-})
+  next(); // 2
+},
+function (req, res) { // 3
+  const { id, name, price } = req.body;
+  recipes.push({ id, name, price});
+  res.status(201).json({ message: 'Recipe created successfully!'});
+});
 
-app.post('/greetings', (_req, res) => {
-  const {name, age } = _req.body;
-  if(parseInt(age, 10) <= 17){
-    return res.status(401).json({message:`Unauthorized`});
-  }
-  return res.status(200).json( { message:`Hello ${name}`})
-})
-
-app.listen(3000, () => console.log('ouvindo na porta 3000!'));
+app.listen(3000, () => {
+  console.log('Aplicação ouvindo na porta 3000');
+});
