@@ -8,6 +8,12 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 
-app.get('/ping', (_req, res) => res.json({ "message": "pong" }));
+app.get('/ping', (_req, res) => 
+res.json({ "message": "pong" }));
+
+app.post('/hello', (_req, res) =>{
+  const { name } = _req.body;
+  return res.status(200).json({"message": `Hello, ${name}!`})
+})
 
 app.listen(3000, () => console.log('ouvindo na porta 3000!'));
