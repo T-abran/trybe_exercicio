@@ -1,3 +1,6 @@
+db.movies.find();
+
+
 db.movies.updateOne(
   {
   title: "Batman"},
