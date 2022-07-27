@@ -1,5 +1,5 @@
 {
-  "compilerOptions": {
+    "compilerOptions": {
     "outDir": "./dist",
     "rootDir": ".",
     "target": "es2019",
